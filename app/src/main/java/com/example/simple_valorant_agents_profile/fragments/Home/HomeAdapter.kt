@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.FrameLayout
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
@@ -18,6 +19,10 @@ import com.example.simple_valorant_agents_profile.R
 class HomeAdapter(
     private val context: Context,
     private val images: List<String>,
+    private val agentName: List<String>,
+    private val agentRole: List<String>,
+    private val roleIcons: List<String>,
+    private val agentIcons: List<String>,
     private val frontAnimation: AnimatorSet,
     private val backAnimation: AnimatorSet,
     private val scale: Float
@@ -37,6 +42,10 @@ class HomeAdapter(
         Log.w("bora", images.toString() )
         val view = convertView ?: LayoutInflater.from(context).inflate(R.layout.home_grid_view_items, parent, false)
         val imageView = view.findViewById<ImageView>(R.id.agentCard)
+        val agentNames = view.findViewById<TextView>(R.id.agentName)
+        val agentRoles = view.findViewById<TextView>(R.id.agentRole)
+        val roleIcon = view.findViewById<ImageView>(R.id.roleIcon)
+        val agentIcon = view.findViewById<ImageButton>(R.id.profileImage)
         val imageDescription = view.findViewById<FrameLayout>(R.id.agentInformation)
         imageView.cameraDistance = 8000 * scale
         imageDescription.cameraDistance = 8000 * scale
@@ -45,6 +54,16 @@ class HomeAdapter(
             .load(images[position])
             .centerCrop()
             .into(imageView)
+
+        Glide.with(context)
+            .load(roleIcons[position])
+            .centerCrop()
+            .into(roleIcon)
+
+        Glide.with(context)
+            .load(agentIcons[position])
+            .centerCrop()
+            .into(agentIcon)
 
         view.setOnClickListener {
             if (isFront) {
@@ -61,6 +80,9 @@ class HomeAdapter(
                 isFront = true
             }
         }
+
+        agentNames.text = agentName[position]
+        agentRoles.text = agentRole[position]
 
         return view
     }

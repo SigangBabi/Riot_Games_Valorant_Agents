@@ -10,7 +10,7 @@ interface ApiServices {
     @GET("v1/bb39c5a5-f5c4-4bf8-b038-6dd042b4cbe1")
     fun getLoginCreds() : Call<List<LoginCredsItem>>
 
-    @GET("v1/14385927-8ace-48cf-97de-43d7491ebc03")
+    @GET("v1/3f4bed21-8078-4221-bfb7-bcbf69fa7e69")
     fun getAgentInfo() : Call<List<AgentsInformationItem>>
 
 }

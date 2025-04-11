@@ -34,6 +34,14 @@ class HomeFragment(scale : Float) : Fragment() {
 
     private val imageUrls = mutableListOf<String>()
 
+    private val agentName = mutableListOf<String>()
+
+    private val agentRole = mutableListOf<String>()
+
+    private val roleIconUrls = mutableListOf<String>()
+
+    private val agentIconUrls = mutableListOf<String>()
+
     lateinit var frontAnimation: AnimatorSet
     lateinit var backAnimation: AnimatorSet
     var isFront : Boolean = true
@@ -55,6 +63,12 @@ class HomeFragment(scale : Float) : Fragment() {
             var index = 0
             while(agentInformation!!.size > index){
                 imageUrls.add(agentInformation!![index].agentImg)
+                agentName.add(agentInformation!![index].agent)
+                agentRole.add(agentInformation!![index].role)
+                roleIconUrls.add(agentInformation!![index].roleLogo)
+                agentIconUrls.add(agentInformation!![index].agentLogo)
+
+
                 index += 1
             }
 
@@ -83,7 +97,7 @@ class HomeFragment(scale : Float) : Fragment() {
             getAgentInformation()
             imageDisplayed = true
         }
-        gridView.adapter = HomeAdapter(requireContext(), imageUrls, frontAnimation, backAnimation, imgScale)
+        gridView.adapter = HomeAdapter(requireContext(), imageUrls, agentName, agentRole, roleIconUrls, agentIconUrls, frontAnimation, backAnimation, imgScale)
         return view
     }
 

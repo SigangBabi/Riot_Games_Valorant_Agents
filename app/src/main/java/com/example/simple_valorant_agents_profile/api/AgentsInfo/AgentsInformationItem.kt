@@ -5,5 +5,7 @@ data class AgentsInformationItem(
     val agent: String,
     val agentId: Int,
     val agentImg: String,
-    val role: String
+    val agentLogo: String,
+    val role: String,
+    val roleLogo: String
 )
