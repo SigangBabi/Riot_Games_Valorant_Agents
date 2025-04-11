@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">#3674B5</item>
+        <item name="colorPrimaryVariant">#A1E3F9</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondaryVariant">#F26B0F</item>
+        <item name="colorSecondary">#FCC737</item>
+        <item name="colorOnSecondary">#000000</item>
+        <item name="android:colorBackground">#FFFFFF</item>
+        <item name="colorOnBackground">#000000</item>
+        <item name="colorError">#B00020</item>
+        <item name="colorOnError">#FFFFFF</item>
+        <item name="colorOnSurface">#000000</item>
+        <item name="colorSurface">#FFFFFF</item>
+    </style>
+
+    <style name="titleStyle">
+        <item name="android:textSize">30dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+</resources>

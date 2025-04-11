@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/home"
+        android:title="Home"
+        android:checked="false"
+        android:background = "@android:color/transparent"
+        android:icon="@drawable/home_icon"/>
+
+    <item android:id="@+id/account"
+        android:title="Account"
+        android:checked="false"
+        android:background = "@android:color/transparent"
+        android:icon="@drawable/account_icon"/>
+
+    <item android:id="@+id/news"
+        android:title="News"
+        android:checked="false"
+        android:background = "@android:color/transparent"
+        android:icon="@drawable/news_icon"/>
+
+    <item android:id="@+id/games"
+        android:title="Games"
+        android:checked="false"
+        android:background = "@android:color/transparent"
+        android:icon="@drawable/joystick_icon"/>
+</menu>

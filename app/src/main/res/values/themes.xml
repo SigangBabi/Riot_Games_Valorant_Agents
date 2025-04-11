@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Simple_Valorant_Agents_Profile" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#3674B5</item>
+        <item name="colorPrimaryVariant">#A1E3F9</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondaryVariant">#F26B0F</item>
+        <item name="colorSecondary">#FCC737</item>
+        <item name="colorOnSecondary">#000000</item>
+        <item name="android:colorBackground">#FFFFFF</item>
+        <item name="colorOnBackground">#000000</item>
+        <item name="colorError">#B00020</item>
+        <item name="colorOnError">#FFFFFF</item>
+        <item name="colorOnSurface">#000000</item>
+        <item name="colorSurface">#FFFFFF</item>
+    </style>
+
+    <style name="Theme.Simple_Valorant_Agents_Profile" parent="Base.Theme.Simple_Valorant_Agents_Profile" />
+</resources>
